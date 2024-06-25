@@ -1,33 +1,95 @@
-import avesNoronha from '../db.json'
-import { useState } from 'react'
-import BirdCard from '../components/BirdCard';
 
-const mapAvesNoronha = avesArray => {
-    return avesArray.map(ave => {
-        return {
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import BirdCard from '../components/BirdCard'
+import AddBirdForm from '../components/AddNewBird';
+import { Link } from 'react-router-dom'
 
-        }
-    })
-}
 
 
 const Especies = () => {
-const [aves, setAves] = useState(mapAvesNoronha(avesNoronha));
+    
+
+    const [bird, setBird] = useState([]);
+ 
+     const getBird = async () => {
+         try {
+             const response = await axios.get('http://localhost:5005/birds');
+             setBird(response.data);
+             console.log('Response:', response.data);
+         } catch (error) {
+             console.log('Error fetching the bird:', error);
+         }
+     };
+
+     const deleteHandler = async (id) => {
+        try {
+          await axios.delete(`http://localhost:5005/birds/${id}`);
+          setBird(bird.filter(b => b.id !== id));
+          console.log(`Card com ID ${id} excluído com sucesso`);
+        } catch (error) {
+          console.log('Erro ao excluir o card:', error);
+        }
+      };
+ 
+     useEffect(() => {
+         getBird();
+     }, []);
 
 
-    return(
+
+     const addNewBird = newBird => {
+        
+       
+
+       
+
+        const UpdatedBirdList = [newBird, ...bird];
+        setBird(UpdatedBirdList);
+    };
+
+     return (
         <div>
-           {aves.map(ave => {
-            return (
-                <BirdCard
-                name={ave}
-                key={ave.id} />
-            )
-           })}
+            
+
+           
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            
+        {bird.map(birds => (
+          <BirdCard birds={birds} key={birds.id} deleteHandler={deleteHandler} /> 
+          
+        ))}
+       <div style={{ marginTop: '20px', textAlign: 'center' }}>
+        <Link to="/especies/novaespecie">
+          <button
+            style={{
+              backgroundColor: 'blue',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '7px',
+              position: 'absolute',
+              bottom: '300px',
+              right: '150px',
+              
+    
+              
+            }}
+          >
+            Adicionar Novo Pássaro
+          </button>
+        </Link>
+      </div>
+      </div>
+   
+
+         
+
         </div>
-    )
+    );
+
    
 };
+ 
 
 export default Especies;
 

@@ -1,46 +1,66 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams, Link  } from 'react-router-dom';
 
+import MemberCard from '../components/MemberCard';
 
-// http://localhost:5005/birds
 
 
 
 const QuemSomos = () => {
+    
 
-    const [team, setTeam] = useState() 
-    const { teamId } = useParams();
-    console.log(teamId);
+   const [team, setTeam] = useState([]);
 
-    const getMemberTeam = async member => {
-            try {
-                const response = await axios.get('http://localhost:5005/team');
-                setProject(response.data); 
-            } catch (error) {
-                console.log('error fetching the member', error)
-            }
+    const getTeam = async () => {
+        try {
+            const response = await axios.get('http://localhost:5005/team');
+            setTeam(response.data);
+            console.log('Response:', response.data);
+        } catch (error) {
+            console.log('Error fetching the team:', error);
+        }
     };
 
     useEffect(() => {
-        getMemberTeam(teamId);
-    }, [teamId])
+        getTeam();
+    }, []);
 
     return (
         <div>
-          <h1>Quem Somos</h1>
-          <div className="equipe-container">
-            {equipe.map((equipe, index) => (
-              <div key={index} className="membro">
-                <img src={require(`./imagens/${equipe.imagem}`).default} alt={equipe.nome} />
-                <h2>{equipe.nome}</h2>
-                <p>{equipe.funcao}</p>
-              </div>
-            ))}
-          </div>
+            
+            {!team && <h3>Não encontrado</h3>}
+
+           
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {team.map(member => (
+          <MemberCard member={member} key={member.id} /> 
+        ))}
+      </div>
+   
+
+         
+
         </div>
-      );
+    );
+
    
 };
 
 export default QuemSomos;
+
+
+
+/*{team.map(member => {
+                return (
+                     //<MemberCard member={member}/>
+                    <div>
+                    <h2>{member.fullName}</h2>
+                    <p>{member.role}</p>
+                    <img src={member.image} alt={member.fullName} />
+                </div>
+                );
+            })}*/
+
+
+
+

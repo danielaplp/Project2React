@@ -1,3 +1,4 @@
+
 import {
   Box,
   Center,
@@ -6,22 +7,12 @@ import {
   Text,
   Stack,
   Image,
-  Button
 } from '@chakra-ui/react'
- import { Link } from 'react-router-dom'
- import ReactAudioPlayer from 'react-audio-player'
 
+//const IMAGE =
+  //'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
 
-
-export default function BirdCard(props) {
-  const playSound = () => {
-    const audio = new Audio(props.birds.song);
-    audio.play();
-    console.error('Erro ao reproduzir o som:');
-  }
-
- 
-
+export default function MemberCard(props) {
   return (
     <Center py={12}>
       <Box
@@ -48,7 +39,7 @@ export default function BirdCard(props) {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${props.birds.image1})`,
+            backgroundImage: `url(${props.member.image})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -62,23 +53,18 @@ export default function BirdCard(props) {
             height={230}
             width={282}
             objectFit={'cover'}
-            src={props.birds.image1}
+            src={props.member.image}
             alt="#"
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'} textTransform={'lowercase'} fontStyle={'italic'} >
-            {props.birds.scientificName}
+          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+            {props.member.role}
           </Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-             {props.birds.name}
+             {props.member.fullName}
           </Heading>
-        
-          <ReactAudioPlayer controls src={props.birds.song} />
           <Stack direction={'row'} align={'center'}>
-
-          <Button onClick={() => props.deleteHandler(props.birds.id)}>Excluir</Button>
-          
          
   
           </Stack>

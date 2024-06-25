@@ -6,17 +6,22 @@ import AIlha from './pages/AIlha'
 import Especies from './pages/Especies'
 import Atividades from "./pages/Atividades";
 import * as React from 'react'
-import avesData from './db.json'
-import { useState } from 'react';
+import Homepage from './pages/Homepage';
+import AddNewBird from './components/AddNewBird';
+import BirdWatching from './pages/BirdWatching';
+import FormBw from './components/FormBw';
+import AtividadeDetail from './pages/AtividadesDetails';
+
+
 
 
 
 function App() {
 
-  const [avesNoronha, setAvesNoronha] = useState(avesData)
+
 
   return (
-    <div className="App">
+    <div>
 
     <Navbar />
     
@@ -27,9 +32,16 @@ function App() {
       <Route path='/oprojeto' element={<OProjeto />} />
       <Route path='/aIlha' element={<AIlha />} />
       <Route path='/especies' element={<Especies/>} />
+      <Route path='/especies/novaespecie' element={<AddNewBird />} />
       <Route path='/atividades' element={<Atividades />} />
+      <Route path='/acoes' element={<Atividades />} />
+      <Route path='/acoes/:atividadeId' 
+    element={<AtividadeDetail />}/>
+      <Route exact path="/birdwatching" element={<BirdWatching/> } />
+      <Route exact path="/expedicao" element={<FormBw/> } />
 
     </Routes>
+
     </div>
   )
 }
