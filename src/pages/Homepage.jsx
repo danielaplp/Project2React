@@ -1,8 +1,14 @@
 'use client'
 
 import { Stack, Flex, Button, Text, VStack, useBreakpointValue, Center } from '@chakra-ui/react'
+import { motion } from 'framer-motion';
 
 export default function Homepage() {
+  const handleDonateClick = () => {
+    
+    window.open('https://www.paypal.com/donate/?hosted_button_id=HXBVYMHRLUVML', '_blank');
+  };
+
   return (
     <Flex
       w="full"
@@ -16,12 +22,15 @@ export default function Homepage() {
       align="center"
       justify="center"
       >
-      <VStack
+       <VStack
         w="full"
         justify="center"
         px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
+        spacing={6}
+        zIndex={1}> 
         <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+      
           <Text
             color={'white'}
             fontWeight={700}
@@ -31,11 +40,27 @@ export default function Homepage() {
             
             <h2>AVES de NORONHA</h2>
             <h4>Pesquisa, turismo e conservação</h4>
-          </Text>
-         
+          </Text> 
+          
         </Stack>
-      </VStack>
+       </VStack> 
+       <a href="https://seulinkdedoacao.com" target="_blank" rel="noopener noreferrer"></a>
+       <Button
+          onClick={handleDonateClick}
+          position='absolute'
+          top="80vh"
+          left="50%"
+          bg="transparent"
+          color="white"
+          borderRadius="full"
+          _hover={{ bg: 'white', color: 'black' }}
+          border="1px solid white"
+        >
+        Doar
+      </Button>
+       
     </Flex>
+    
   )
 }
 

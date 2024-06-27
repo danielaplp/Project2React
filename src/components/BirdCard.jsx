@@ -6,21 +6,27 @@ import {
   Text,
   Stack,
   Image,
-  Button
+  Button, 
+  Switch
 } from '@chakra-ui/react'
  import { Link } from 'react-router-dom'
  import ReactAudioPlayer from 'react-audio-player'
+ import { useState } from 'react';
 
 
 
 export default function BirdCard(props) {
+  const [toggleState, setToggleState] = useState(false);
+
   const playSound = () => {
     const audio = new Audio(props.birds.song);
     audio.play();
     console.error('Erro ao reproduzir o som:');
   }
 
- 
+  const handleToggle = () => {
+    setToggleState(!toggleState);
+  }
 
   return (
     <Center py={12}>
@@ -78,8 +84,10 @@ export default function BirdCard(props) {
           <Stack direction={'row'} align={'center'}>
 
           <Button onClick={() => props.deleteHandler(props.birds.id)}>Excluir</Button>
-          
          
+          
+          {toggleState ? <Text color="red">Risco de Extinção</Text> : null}
+            <Switch size="md" colorScheme={toggleState ? "red" : "green"} isChecked={toggleState} onChange={handleToggle} />
   
           </Stack>
         </Stack>

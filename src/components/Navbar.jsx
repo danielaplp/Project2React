@@ -28,7 +28,7 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box >
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -36,8 +36,7 @@ export default function Navbar() {
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+       
         align={'center'}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
@@ -308,3 +307,4 @@ const NAV_ITEMS = [
 ];
 
 
+// bg={useColorModeValue('white', 'gray.800')}

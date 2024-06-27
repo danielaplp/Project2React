@@ -11,6 +11,7 @@ import AddNewBird from './components/AddNewBird';
 import BirdWatching from './pages/BirdWatching';
 import FormBw from './components/FormBw';
 import AtividadeDetail from './pages/AtividadesDetails';
+import Footer from './components/Footer';
 
 
 
@@ -24,7 +25,6 @@ function App() {
     <div>
 
     <Navbar />
-    
     
     <Routes>
       <Route path='/' element={<Homepage />} />
@@ -40,7 +40,10 @@ function App() {
       <Route exact path="/birdwatching" element={<BirdWatching/> } />
       <Route exact path="/expedicao" element={<FormBw/> } />
 
+
     </Routes>
+
+    <Footer />
 
     </div>
   )

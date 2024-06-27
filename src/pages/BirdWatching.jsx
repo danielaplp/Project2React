@@ -111,7 +111,7 @@ export default function SplitWithImage() {
           <Link to="/expedicao">
         <button
           style={{
-            backgroundColor: 'rgb(61, 128, 255)',
+            backgroundColor: '#4299e1',
             color: 'white',
             padding: '10px 20px',
             borderRadius: '7px',

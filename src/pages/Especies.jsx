@@ -63,7 +63,7 @@ const Especies = () => {
         <Link to="/especies/novaespecie">
           <button
             style={{
-              backgroundColor: 'blue',
+              backgroundColor: '#4299e1',
               color: 'white',
               padding: '10px 20px',
               borderRadius: '7px',

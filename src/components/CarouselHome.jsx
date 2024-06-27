@@ -1,4 +1,6 @@
-import { useState } from 'react'
+'use client'
+
+import React from 'react'
 import {
   Box,
   IconButton,
@@ -13,10 +15,7 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick'
 
-
-
-
-// Settings for the slide
+// Settings for the slider
 const settings = {
   dots: true,
   arrows: false,
@@ -29,10 +28,10 @@ const settings = {
   slidesToScroll: 1,
 }
 
-export default function CarouselIlha() {
+export default function CarouselHome() {
   // As we have used custom buttons, we need a reference variable to
   // change the state
-  const [slider, setSlider] = useState(null)
+  const [slider, setSlider] = React.useState<Slider | null>(null)
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
@@ -43,16 +42,21 @@ export default function CarouselIlha() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: '',
-      text: "",
-      image:'https://i0.wp.com/blog.bonitour.com.br/wp-content/uploads/2020/10/Destaque-3-Praia-do-Sancho-Bonitour-1024x545.jpg?resize=1024%2C545',
+      title: 'Aves de Noronha',
+      text: "Pesquisa, turismo e conservação",
+      image:'https://s3.amazonaws.com/media.wikiaves.com.br/images/6491/1946414g_d5f2cd94c146e3ce26bebe533dd61483.jpg',
     },
     {
-      title: '',
-      text: "",
-      image:'https://revistasagarana.com.br/wp-content/uploads/2011/10/revistasagarana-fernandodenoronha-fotosjeanyvesdonnardnoronha-2009-a-591.jpg',
+      title: 'Aves de Noronha',
+      text: "Pesquisa, turismo e conservação",
+      image:'https://static.wixstatic.com/media/c74d60_5edb8885064340c6920d9dc8faacb2fe~mv2.jpg/v1/fill/w_1899,h_773,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c74d60_5edb8885064340c6920d9dc8faacb2fe~mv2.jpg',
     },
-   
+    {
+      title: 'Aves de Noronha',
+      text: "Pesquisa, turismo e conservação",
+      image:
+        'https://static.wixstatic.com/media/c74d60_70561d93e4b54cf4a664e82a34d2b2ba~mv2.jpg/v1/fill/w_1781,h_730,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c74d60_70561d93e4b54cf4a664e82a34d2b2ba~mv2.jpg',
+    },
   ]
 
   return (
@@ -112,10 +116,10 @@ export default function CarouselIlha() {
                 position="absolute"
                 top="50%"
                 transform="translate(0, -50%)">
-                <Heading color={'white'}fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
                   {card.title}
                 </Heading>
-                <Text color={'white'} fontSize={{ base: 'md', lg: 'lg' }}>
+                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
                   {card.text}
                 </Text>
               </Stack>

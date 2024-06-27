@@ -1,5 +1,5 @@
 
-import CarouselIlha from '../components/Carousel2'
+import CarouselIlha from '../components/CarouselHome'
 
 
 const AIlha = () => {
