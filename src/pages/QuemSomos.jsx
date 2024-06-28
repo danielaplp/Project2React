@@ -13,7 +13,7 @@ const QuemSomos = () => {
 
     const getTeam = async () => {
         try {
-            const response = await axios.get('https://project2-server.onrender.com/team');
+            const response = await axios.get('http://localhost:5005/team');
             setTeam(response.data);
             console.log('Response:', response.data);
         } catch (error) {

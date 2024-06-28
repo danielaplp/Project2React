@@ -9,7 +9,7 @@ const AtividadeDetail = () => {
 
     const getAtividade = async (id) => {
             try {
-                const response = await axios.get(`https://project2-server.onrender.com/atividades${id}`);
+                const response = await axios.get(`http://localhost:5005/atividades${id}`);
                 setProject(response.data); //in axios we always put .data
             } catch (error) {
                 console.log('error fetching the ação', error)

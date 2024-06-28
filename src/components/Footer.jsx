@@ -1,5 +1,6 @@
-'use client'
-import logo from '../assets/AdN_azul_padrão.png';
+
+
+import React from 'react';
 import {
   Box,
   chakra,
@@ -8,20 +9,20 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-} from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { ReactNode } from 'react'
+} from '@chakra-ui/react';
+import { FaInstagram } from 'react-icons/fa';
+import logo from '../assets/AdN_azul_padrão.png'; 
 
 const Logo = (props) => {
   return (
     <Box
-    as="img"
-    src={logo}
-    alt="Logo"
-    h="auto"
-    w="50px"  
-  />
-  )
+      as="img"
+      src={logo}
+      alt="Logo"
+      h="auto"
+      w="40px"  
+    />
+  );
 }
 
 const SocialButton = ({
@@ -30,15 +31,14 @@ const SocialButton = ({
   href,
 }) => {
   return (
-
-    <chakra.button
+    <chakra.a
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       rounded={'full'}
       w={8}
       h={8}
       cursor={'pointer'}
-      as={'a'}
       href={href}
+      target="_blank" 
       display={'inline-flex'}
       alignItems={'center'}
       justifyContent={'center'}
@@ -48,9 +48,8 @@ const SocialButton = ({
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
-    </chakra.button>
-    
-  )
+    </chakra.a>
+  );
 }
 
 export default function Footer() {
@@ -69,10 +68,7 @@ export default function Footer() {
         <Logo />
         <Text>© Projeto Aves de Noronha </Text>
         <Stack direction={'row'} spacing={6}>
-          
-       
-          <SocialButton label={'Instagram'} href={'https://www.instagram.com/avesdenoronha/'} target="_blank">
-            
+          <SocialButton label={'Instagram'} href={'https://www.instagram.com/avesdenoronha/'}>
             <FaInstagram />
           </SocialButton>
         </Stack>

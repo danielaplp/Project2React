@@ -11,12 +11,20 @@ import {
 } from '@chakra-ui/react'
  import { Link } from 'react-router-dom'
  import ReactAudioPlayer from 'react-audio-player'
- import { useState } from 'react';
+ import { useState, useEffect } from 'react';
 
 
 
 export default function BirdCard(props) {
   const [toggleState, setToggleState] = useState(false);
+
+  useEffect(() => {
+    
+    const savedToggleState = localStorage.getItem(`toggleState_${props.birds.id}`);
+    if (savedToggleState !== null) {
+      setToggleState(JSON.parse(savedToggleState));
+    }
+  }, [props.birds.id]);
 
   const playSound = () => {
     const audio = new Audio(props.birds.song);
@@ -25,8 +33,13 @@ export default function BirdCard(props) {
   }
 
   const handleToggle = () => {
-    setToggleState(!toggleState);
+    const newState = !toggleState;
+    setToggleState(newState);
+    
+    localStorage.setItem(`toggleState_${props.birds.id}`, JSON.stringify(newState));
   }
+
+ 
 
   return (
     <Center py={12}>
@@ -86,7 +99,7 @@ export default function BirdCard(props) {
           <Button onClick={() => props.deleteHandler(props.birds.id)}>Excluir</Button>
          
           
-          {toggleState ? <Text color="red">Risco de Extinção</Text> : null}
+          {toggleState ? <Text color="red" fontFamily={'body'}>Risco de Extinção</Text> : null}
             <Switch size="md" colorScheme={toggleState ? "red" : "green"} isChecked={toggleState} onChange={handleToggle} />
   
           </Stack>

@@ -14,7 +14,7 @@ const Especies = () => {
  
      const getBird = async () => {
          try {
-             const response = await axios.get('https://project2-server.onrender.com/birds');
+             const response = await axios.get('http://localhost:5005/birds');
              setBird(response.data);
              console.log('Response:', response.data);
          } catch (error) {
@@ -24,7 +24,7 @@ const Especies = () => {
 
      const deleteHandler = async (id) => {
         try {
-          await axios.delete(`https://project2-server.onrender.com/birds/${id}`);
+          await axios.delete(`http://localhost:5005/birds/${id}`);
           setBird(bird.filter(b => b.id !== id));
           console.log(`Card com ID ${id} excluído com sucesso`);
         } catch (error) {

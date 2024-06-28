@@ -48,7 +48,7 @@ const AddNewBird = () => {
             name, image1: image, scientificName
         }
 
-      await axios.post("https://project2-server.onrender.com/birds", newBird)
+      await axios.post("http://localhost:5005/birds", newBird)
 
       //once the project is created 
       //redirect the user to the list of the projects

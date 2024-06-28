@@ -291,15 +291,16 @@ const NAV_ITEMS = [
     label: 'Atividades',
     children: [
       {
-        label: 'Birdwatching',
-      
-        href: '/birdwatching',
-      },
-      {
         label: 'Ações',
       
         href: '/acoes',
       },
+      {
+        label: 'Birdwatching',
+      
+        href: '/birdwatching',
+      },
+      
       
     ],
   },
