@@ -63,7 +63,7 @@ export default function Navbar() {
           
           {/*<Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
+            fontFamily={'Open sans'}
             color={useColorModeValue('gray.800', 'white')}>
             Logo
           </Text>*/}

@@ -6,22 +6,11 @@ import {
     Text,
     Stack,
     Image,
-    Button
-  } from '@chakra-ui/react'
-   import { Link } from 'react-router-dom'
-   
+  } from '@chakra-ui/react';
   
-  
-  
-  export default function AtividadesCard(props) {
-   
-  
-   
-  
+  export default function BwCard({ title, image }) {
     return (
       <Center py={12}>
-                    <Link to={`/acoes/${props.atividades.id}`}>
-
         <Box
           role={'group'}
           p={6}
@@ -30,11 +19,9 @@ import {
           w={'full'}
           bg={useColorModeValue('white', 'gray.800')}
           boxShadow={'2xl'}
-          rounded={'lg'}
           pos={'relative'}
           zIndex={1}>
           <Box
-            // rounded={'lg'}
             mt={-12}
             pos={'relative'}
             height={'230px'}
@@ -46,7 +33,7 @@ import {
               pos: 'absolute',
               top: 5,
               left: 0,
-              backgroundImage: `url(${props.atividades.image})`,
+              backgroundImage: `url(${image})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
@@ -56,39 +43,19 @@ import {
               },
             }}>
             <Image
-              // rounded={'lg'}
               height={230}
               width={282}
               objectFit={'cover'}
-              src={props.atividades.image}
-              alt="#"
+              src={image}
+              alt={title}
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'}   >
-              {props.atividades.text}
-            </Text>
-            <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500}>
-               {props.atividades.name}
+            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+              {title}
             </Heading>
-          
-           
-            <Stack direction={'row'} align={'center'}>
-  
-            <Box
-                mt={4}
-                display={'none'}
-                _groupHover={{ display: 'block' }}
-              >
-                <Text fontSize={'sm'}>{props.atividades.detailedInfo}</Text>
-            
-                </Box>
-    
-            </Stack>
           </Stack>
         </Box>
-        
-</Link>
       </Center>
-    )
+    );
   }

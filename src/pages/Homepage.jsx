@@ -2,6 +2,10 @@
 
 import { Stack, Flex, Button, Text, VStack, useBreakpointValue, Center } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
+import logotext from '../assets/LOGO TEXTO 1.png'
+import logotextblack from '../assets/LOGO TEXTO PRETA VAZADA(1).png'
+import noronhaphoto from '../assets/fernando-de-noronha.jpg'
+
 
 export default function Homepage() {
   const handleDonateClick = () => {
@@ -13,10 +17,7 @@ export default function Homepage() {
     <Flex
       w="full"
       h="100vh"
-      backgroundImage={
-        'url(https://s3.amazonaws.com/media.wikiaves.com.br/images/6491/1946414g_d5f2cd94c146e3ce26bebe533dd61483.jpg)'
-        
-      }
+      backgroundImage={noronhaphoto}
       backgroundSize="cover"
       backgroundPosition="center"
       align="center"
@@ -26,21 +27,15 @@ export default function Homepage() {
         w="full"
         justify="center"
         px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
+        //    
         spacing={6}
         zIndex={1}> 
-        <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-      
-          <Text
-            color={'white'}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
-           >
-            
-            <h2>AVES de NORONHA</h2>
-            <h4>Pesquisa, turismo e conservação</h4>
-          </Text> 
+        <Stack maxW={'2xl'} align={'flex-start'} spacing={6} >
+        
+        
+                
+     <img src={logotextblack} alt="logotext" width="70%" style={{ marginTop: '-300px', marginLeft: '100px' }}  />
+         
           
         </Stack>
        </VStack> 
@@ -48,13 +43,13 @@ export default function Homepage() {
        <Button
           onClick={handleDonateClick}
           position='absolute'
-          top="80vh"
+          top="55vh"
           left="50%"
           bg="transparent"
-          color="white"
+          color="black"
           borderRadius="full"
           _hover={{ bg: 'white', color: 'black' }}
-          border="1px solid white"
+          border="1px solid black"
         >
         Doar
       </Button>

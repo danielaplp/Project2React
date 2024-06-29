@@ -23,11 +23,11 @@ export default function MemberCard(props) {
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
-        rounded={'lg'}
+        // rounded={'lg'}
         pos={'relative'}
         zIndex={1}>
         <Box
-          rounded={'lg'}
+          // rounded={'lg'}
           mt={-12}
           pos={'relative'}
           height={'230px'}
@@ -49,7 +49,7 @@ export default function MemberCard(props) {
             },
           }}>
           <Image
-            rounded={'lg'}
+            // rounded={'lg'}
             height={230}
             width={282}
             objectFit={'cover'}

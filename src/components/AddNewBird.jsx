@@ -48,7 +48,7 @@ const AddNewBird = () => {
             name, image1: image, scientificName
         }
 
-      await axios.post("http://localhost:5005/birds", newBird)
+      await axios.post("https://project2-server.vercel.app/birds", newBird)
 
       //once the project is created 
       //redirect the user to the list of the projects
@@ -73,7 +73,7 @@ return (
     bg={useColorModeValue('gray.50', 'gray.800')}>
     <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
       <Stack align={'center'}>
-        <Heading fontSize={'4xl'} textAlign={'center'}>
+        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'Open sans'}>
           Adicionar Espécie
         </Heading>
        
@@ -111,7 +111,8 @@ return (
               color={'white'}
               _hover={{
                 bg: 'blue.500',
-              }}>
+              }}
+              fontFamily={'Open sans'}>
              Adicionar
             </Button>
           </Stack>

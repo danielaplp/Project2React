@@ -12,12 +12,13 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram } from 'react-icons/fa';
 import logo from '../assets/AdN_azul_padrão.png'; 
+import logoblack from '../assets/logo aves de noronha PRETA vasada.png'
 
 const Logo = (props) => {
   return (
     <Box
       as="img"
-      src={logo}
+      src={logoblack}
       alt="Logo"
       h="auto"
       w="40px"  
@@ -55,8 +56,8 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      bg={useColorModeValue('gray.40', 'gray.600')}
+      color={useColorModeValue('gray.600', 'gray.600')}>
       <Container
         as={Stack}
         maxW={'6xl'}

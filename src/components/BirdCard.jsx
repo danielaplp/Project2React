@@ -51,11 +51,11 @@ export default function BirdCard(props) {
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
-        rounded={'lg'}
+        // rounded={'lg'}
         pos={'relative'}
         zIndex={1}>
         <Box
-          rounded={'lg'}
+          // rounded={'lg'}
           mt={-12}
           pos={'relative'}
           height={'230px'}
@@ -77,7 +77,7 @@ export default function BirdCard(props) {
             },
           }}>
           <Image
-            rounded={'lg'}
+            // rounded={'lg'}
             height={230}
             width={282}
             objectFit={'cover'}
@@ -89,7 +89,7 @@ export default function BirdCard(props) {
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'lowercase'} fontStyle={'italic'} >
             {props.birds.scientificName}
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500}>
              {props.birds.name}
           </Heading>
         
@@ -99,7 +99,7 @@ export default function BirdCard(props) {
           <Button onClick={() => props.deleteHandler(props.birds.id)}>Excluir</Button>
          
           
-          {toggleState ? <Text color="red" fontFamily={'body'}>Risco de Extinção</Text> : null}
+          {toggleState ? <Text color="red" fontFamily={'Open sans'}>Risco de Extinção</Text> : null}
             <Switch size="md" colorScheme={toggleState ? "red" : "green"} isChecked={toggleState} onChange={handleToggle} />
   
           </Stack>

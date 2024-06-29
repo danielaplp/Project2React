@@ -16,7 +16,7 @@ const Atividades = () => {
  
      const getAtividade = async () => {
          try {
-             const response = await axios.get('http://localhost:5005/atividades');
+             const response = await axios.get('https://project2-server.vercel.app/atividades');
              setAtividade(response.data);
              console.log('Response:', response.data);
          } catch (error) {

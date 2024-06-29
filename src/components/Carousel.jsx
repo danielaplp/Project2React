@@ -41,8 +41,18 @@ export default function Carousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Birdwatching em Noronha',
-      text: "Programe sua expedição",
+      title: '',
+      text: "",
+      image: 'https://www.wikiaves.com.br/img/hero-bg.jpg',
+    },
+    {
+      title: '',
+      text: "",
+      image: 'https://static.wixstatic.com/media/c74d60_7e17373497fc483f8e31855f9bafebec~mv2.jpg',
+    },
+    {
+      // title: 'Birdwatching em Noronha',
+      // text: "Programe sua expedição",
       image:'https://static.wixstatic.com/media/c74d60_edc7c07f8c1e474fa36fa9e23d0e2f97~mv2.jpg',
     },
     {
@@ -56,6 +66,8 @@ export default function Carousel() {
       text: "",
       image: 'https://s3.amazonaws.com/media.wikiaves.com.br/images/1674/4761887g_c42caaa0629eeee12f6b50e13af4ea4b.jpg',
     },
+    
+    
   ]
 
   return (
@@ -100,15 +112,18 @@ export default function Carousel() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'6xl'}
+            height={'9xl'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            backgroundImage={`url(${card.image})`}>
-            {/* This is the block you need to change, to customize the caption */}
+            backgroundImage={`url(${card.image})`}
+            
+            >
+              
+            
             <Container size="container.lg" height="600px" position="relative">
-              <Stack
+              {/* <Stack
                 spacing={6}
                 w={'full'}
                 maxW={'lg'}
@@ -121,7 +136,7 @@ export default function Carousel() {
                 <Text color={'white'} fontSize={{ base: 'md', lg: 'lg' }}>
                   {card.text}
                 </Text>
-              </Stack>
+              </Stack> */}
             </Container>
           </Box>
         ))}

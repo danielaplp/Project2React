@@ -85,7 +85,7 @@ return (
        
     <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
       <Stack align={'center'}>
-        <Heading fontSize={'4xl'} textAlign={'center'}>
+        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'Open sans'}>
           Birdwatching em Noronha
         </Heading>
        

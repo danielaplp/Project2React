@@ -14,6 +14,7 @@ import {
   import { CheckIcon } from '@chakra-ui/icons'
 
   import fotonoronha from '../assets/noronha1.jpg'
+  import atoba from '../assets/atoba de pe vermelho 2.png'
   
   const textos = [
     "Promovendo eventos de capacitação em Observação de Aves para guias e professores;",
@@ -30,7 +31,10 @@ import {
         <Container maxW={'6xl'}>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
             <VStack align={'start'} spacing={6} mt={{ base: 4, md: 15 }} >
-            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500} >Fernando de Noronha</Heading>
+            
+ 
+
+            <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500} >Fernando de Noronha</Heading>
               <Text color={'gray.600'} fontSize={'l'} textAlign="left"></Text>
               <Text color={'gray.600'} fontSize={'l'} textAlign="left"> 
               Arquipélago brasileiro, formado por 21 ilhas, ilhotas e rochedos de origem vulcânica, ocupa uma área total de 26 km² — dos quais 17 km² são da ilha principal — e se situa no Oceano Atlântico a nordeste do Brasil continental.
@@ -45,6 +49,7 @@ import {
               Além das aves, as 21 ilhas do arquipélago abrigam répteis únicos como a mabuia (Trachylepis atlantica) e a anfisbênia (Amphisbaena ridleyi), que só podem ser observadas em Noronha, além das tartarugas-verdes (Chelonia mydas), tartarugas-de-pente (Eretmochelys imbricata) e várias outras espécies de tartarugas marinhas. Quando falamos em mamíferos aquáticos, o primeiro que vem a nossa mente são os exibidos golfinhos-rotadores (Stenella longirostris), que todos os dias se aproximam da ilha em grupo para descansar.
               </Text>
               
+              <img src={atoba} alt="atoba" width="50%" style={{ marginTop: '-240px', marginLeft: '1010px' }}  />
               
             </VStack>
             <Box position="relative" display="flex" justifyContent="flex-end">
@@ -55,7 +60,7 @@ import {
                 left={250} 
                 width="calc(50% + 40px)" 
                 height="calc(80% + 40px)" 
-                bg="blue.300"
+                bg="blue.400"
                 zIndex={-1}
                 
               />
@@ -65,17 +70,21 @@ import {
                 marginLeft="auto" 
                 width="200%" 
                 top={55} 
-                left={10}    
+                left={20}    
               >
                 <Box />
+
+                
 
                 <ChakraImage
                   src={fotonoronha}
                   alt="Pessoasbinoculos"
                   objectFit="cover"
                   width="100%"
-                  maxHeight="150%"     
+                  maxHeight="150%"  
+                  boxShadow="0 4px 8px rgba(0, 0, 0, 0.9)"   
                 />
+                
 
               </Box>
             </Box>
