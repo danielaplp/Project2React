@@ -15,6 +15,7 @@ import {
 
   import fotonoronha from '../assets/noronha1.jpg'
   import atoba from '../assets/atoba de pe vermelho 2.png'
+  import ceu from '../assets/ceu.jpg.jpg'
   
   const textos = [
     "Promovendo eventos de capacitação em Observação de Aves para guias e professores;",
@@ -27,7 +28,8 @@ import {
    
   
     return (
-      <Box p={4}>
+        
+      <Box p={4} >
         <Container maxW={'6xl'}>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
             <VStack align={'start'} spacing={6} mt={{ base: 4, md: 15 }} >

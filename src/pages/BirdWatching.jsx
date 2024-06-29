@@ -84,7 +84,7 @@ export default function SplitWithImage() {
        
       </Link>
           
-      <img src={rabojunco} alt="sebito" width='35%' style={{ marginTop: '-450px', marginLeft: '-230px', transform: 'scaleX(-1)' }}  />
+      {/* <img src={rabojunco} alt="sebito" width='35%' style={{ marginTop: '-450px', marginLeft: '-230px', transform: 'scaleX(-1)' }}  /> */}
 
      
         </Stack>

@@ -92,9 +92,7 @@ export default function BirdCard(props) {
           <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500}>
              {props.birds.name}
           </Heading>
-          <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500}>
-             {""}
-          </Heading>
+          
         
           <ReactAudioPlayer controls src={props.birds.song} />
           <Stack direction={'row'} align={'center'}>

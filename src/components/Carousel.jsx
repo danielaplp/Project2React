@@ -41,6 +41,12 @@ export default function Carousel() {
   // This can be static or loaded from a server
   const cards = [
     {
+      // title: 'Birdwatching em Noronha',
+      // text: "Programe sua expedição",
+      // image:'https://static.wixstatic.com/media/c74d60_edc7c07f8c1e474fa36fa9e23d0e2f97~mv2.jpg',
+      image:'https://scontent.flis3-1.fna.fbcdn.net/v/t39.30808-6/399070937_18234737095220374_4051097102641429162_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZVxPdpn6lhYQ7kNvgF7dFNj&_nc_ht=scontent.flis3-1.fna&oh=00_AYCyHNy8Nj8q0FTqWVAHYkkPUqaHe-NTpDfZZG3hip_9pA&oe=6685E50E',
+    },
+    {
       title: '',
       text: "",
       image: 'https://www.wikiaves.com.br/img/hero-bg.jpg',
@@ -50,22 +56,18 @@ export default function Carousel() {
       text: "",
       image: 'https://static.wixstatic.com/media/c74d60_7e17373497fc483f8e31855f9bafebec~mv2.jpg',
     },
-    {
-      // title: 'Birdwatching em Noronha',
-      // text: "Programe sua expedição",
-      image:'https://static.wixstatic.com/media/c74d60_edc7c07f8c1e474fa36fa9e23d0e2f97~mv2.jpg',
-    },
+ 
     {
       title: '',
       text: "",
       image:
-        'https://static.wixstatic.com/media/c74d60_9d3318609b8a4da990d6f6ffc23b1609~mv2.jpg',
+        'https://scontent.flis3-1.fna.fbcdn.net/v/t39.30808-6/404994154_18233862349220374_6216807857202879285_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Ovbx175VlkwQ7kNvgFEf7qe&_nc_ht=scontent.flis3-1.fna&oh=00_AYA2q8g596BdtMWSUMcgm1K-KV71PLKYiaWKRLVHD8nzow&oe=6685D6AD',
     },
-    {
+ /*   {
       title: '',
       text: "",
       image: 'https://s3.amazonaws.com/media.wikiaves.com.br/images/1674/4761887g_c42caaa0629eeee12f6b50e13af4ea4b.jpg',
-    },
+    }, */
     
     
   ]
