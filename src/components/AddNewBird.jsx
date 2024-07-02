@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate} from "react-router-dom";
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {
     Flex,
@@ -15,7 +16,7 @@ import {
     Heading,
     Text,
     useColorModeValue,
-    Link,
+    
   } from '@chakra-ui/react'
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 
@@ -118,6 +119,11 @@ return (
           </Stack>
         </Stack>
       </Box>
+      <Box  color={'blue.600'} textAlign="center">
+          <Link to='/especies' color={'blue.400'} fontFamily={'body'}>
+            Voltar para Espécies
+          </Link>
+        </Box>
     </Stack>
   </Flex>
 
