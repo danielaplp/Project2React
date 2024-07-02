@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 
+
 const Especies = () => {
     
 
@@ -49,6 +50,8 @@ const Especies = () => {
     };
 
      return (
+      
+     
         <div>
             
 
@@ -75,7 +78,7 @@ const Especies = () => {
               
             }}
           >
-            Adicionar Novo Pássaro
+            Adicionar Nova Espécie
           </button>
         </Link>
       </div>
@@ -85,6 +88,10 @@ const Especies = () => {
          
 
         </div>
+      
+        
+        
+       
     );
 
    

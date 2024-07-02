@@ -57,7 +57,11 @@ export default function Footer() {
   return (
     <Box
       bg={useColorModeValue('gray.40', 'gray.600')}
-      color={useColorModeValue('gray.600', 'gray.600')}>
+      color={useColorModeValue('gray.600', 'gray.600')}
+      mt="auto"
+      py={0.5}
+      >
+        
       <Container
         as={Stack}
         maxW={'6xl'}

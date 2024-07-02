@@ -9,6 +9,20 @@ import cocoruta from '../assets/cocoruta 2.png'
 import grazina from '../assets/grazina 2.png'
 import tesourao from '../assets/tesourao 2.png'
 import trintareis from '../assets/trinta reis preto 2.png'
+import {
+    Box,
+    Container,
+    Heading,
+    Text,
+    SimpleGrid,
+    HStack,
+    VStack,
+    Image as ChakraImage,
+    Icon,
+  } from '@chakra-ui/react';
+  import { CheckIcon } from '@chakra-ui/icons';
+  
+  
 
 
 
@@ -35,8 +49,13 @@ const QuemSomos = () => {
     }, []);
 
     return (
+        <Box position="relative">
+            
+    
+    
         
         <div>
+            
             
             
             {!team && <h3>Não encontrado</h3>}
@@ -58,6 +77,9 @@ const QuemSomos = () => {
          
 
         </div>
+       
+        
+    </Box>
     );
 
    

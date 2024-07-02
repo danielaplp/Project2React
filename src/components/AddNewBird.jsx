@@ -73,7 +73,7 @@ return (
     bg={useColorModeValue('gray.50', 'gray.800')}>
     <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
       <Stack align={'center'}>
-        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'Open sans'}>
+        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'body'} color={'gray.600'}>
           Adicionar Espécie
         </Heading>
        
@@ -87,19 +87,19 @@ return (
           <HStack>
             <Box>
               <FormControl id="name" isRequired>
-                <FormLabel>Name</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Name</FormLabel>
                 <Input value={name} type="text" onChange={handleName}/>
               </FormControl>
             </Box>
             <Box>
               <FormControl id="image">
-                <FormLabel>Image</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Image</FormLabel>
                 <Input type="text" value={image} onChange={handleImage} />
               </FormControl>
             </Box>
           </HStack>
           <FormControl id="sName" isRequired>
-            <FormLabel>Scientific Name</FormLabel>
+            <FormLabel color={'gray.600'} fontFamily={'body'}>Scientific Name</FormLabel>
             <Input type="text" value={scientificName} onChange={handleScientificName}/>
           </FormControl>
           <Stack spacing={10} pt={2}>
@@ -112,7 +112,7 @@ return (
               _hover={{
                 bg: 'blue.500',
               }}
-              fontFamily={'Open sans'}>
+              fontFamily={'body'}>
              Adicionar
             </Button>
           </Stack>
@@ -121,18 +121,7 @@ return (
     </Stack>
   </Flex>
 
-/*     <div>
-      <h2>Adicionar Novo Pássaro</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Nome</label>
-        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-        <label>Image</label>
-        <input type="text" name="image" value={image} onChange={(e) => setImage(e.target.value)} />
-        <label>Nome Científico</label>
-        <input type="text" name="sName" value={scientificName} onChange={(e) => setScientificName(e.target.value)} />
-        <button type="submit">Adicionar</button>
-      </form>
-    </div> */
+
   );
 };
 

@@ -12,6 +12,7 @@ import BirdWatching from './pages/BirdWatching';
 import FormBw from './components/FormBw';
 import AtividadeDetail from './pages/AtividadesDetails';
 import Footer from './components/Footer';
+import './App.css';
 
 
 

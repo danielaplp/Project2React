@@ -51,7 +51,7 @@ import {
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+            <Heading fontSize={'3xl'} fontFamily={'body'} fontWeight={800} color={'gray.600'}>
               {title}
             </Heading>
           </Stack>

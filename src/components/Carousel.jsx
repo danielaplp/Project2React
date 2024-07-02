@@ -125,20 +125,7 @@ export default function Carousel() {
               
             
             <Container size="container.lg" height="600px" position="relative">
-              {/* <Stack
-                spacing={6}
-                w={'full'}
-                maxW={'lg'}
-                position="absolute"
-                top="50%"
-                transform="translate(0, -50%)">
-                <Heading color={'white'}fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                  {card.title}
-                </Heading>
-                <Text color={'white'} fontSize={{ base: 'md', lg: 'lg' }}>
-                  {card.text}
-                </Text>
-              </Stack> */}
+              
             </Container>
           </Box>
         ))}

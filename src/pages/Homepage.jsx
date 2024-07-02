@@ -36,13 +36,13 @@ export default function Homepage() {
         
         
                 
-     <img src={logotextblack} alt="logotext" width="70%" style={{ marginTop: '-300px', marginLeft: '100px' }}  />
+      <img src={logotextblack} alt="logotext" width="70%" style={{ marginTop: '-300px', marginLeft: '100px' }}  />
          
           
         </Stack>
        </VStack> 
        <a href="https://seulinkdedoacao.com" target="_blank" rel="noopener noreferrer"></a>
-       <Button
+        <Button
           onClick={handleDonateClick}
           position='absolute'
           top="55vh"
@@ -54,7 +54,7 @@ export default function Homepage() {
           border="1px solid black"
         >
         Doar
-      </Button>
+      </Button>  
        
     </Flex>
     
@@ -62,36 +62,3 @@ export default function Homepage() {
 }
 
 
-/*buttons  <Stack direction={'row'}>
-<Button
-bg={'blue.400'}
-rounded={'full'}
-color={'white'}
-_hover={{ bg: 'blue.500' }}>
-Show me more
-</Button>
-<Button
-bg={'whiteAlpha.300'}
-rounded={'full'}
-color={'white'}
-_hover={{ bg: 'whiteAlpha.500' }}>
-Show me more
-</Button>
-</Stack>*/
-
-// backgroundimage ='url(https://static.wixstatic.com/media/c74d60_5edb8885064340c6920d9dc8faacb2fe~mv2.jpg/v1/fill/w_1899,h_773,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c74d60_5edb8885064340c6920d9dc8faacb2fe~mv2.jpg)'
-
-
-/*const imgURL = "https://static.wixstatic.com/media/c74d60_e241dd8722164bd9808b58e64a8190de~mv2.jpg/v1/fill/w_930,h_754,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c74d60_e241dd8722164bd9808b58e64a8190de~mv2.jpg"
-
-const Homepage = () => {
-  return(
-    <div>
-      <h1>Aves de Noronha</h1>
-      <img src={imgURL} alt="home" className="page-img" />
-    </div>
-  )
-   
-  };
-  
-  export default Homepage;*/

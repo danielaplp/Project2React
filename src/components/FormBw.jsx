@@ -85,7 +85,7 @@ return (
        
     <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
       <Stack align={'center'}>
-        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'Open sans'}>
+        <Heading fontSize={'4xl'} textAlign={'center'} fontFamily={'body'} color={'gray.600'}>
           Birdwatching em Noronha
         </Heading>
        
@@ -99,31 +99,31 @@ return (
           <HStack>
             <Box>
               <FormControl id="name" isRequired>
-                <FormLabel>Nome</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Nome</FormLabel>
                 <Input value={name} type="text" onChange={handleName}/>
               </FormControl>
             </Box>
             <Box>
               <FormControl id="image">
-                <FormLabel>Email</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Email</FormLabel>
                 <Input type="text" value={email} onChange={handleEmail} />
               </FormControl>
             </Box>
             <Box>
               <FormControl id="image">
-                <FormLabel>Mês da expedição</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Mês da expedição</FormLabel>
                 <Input type="text" value={mounth} onChange={handleMounth} />
               </FormControl>
             </Box>
             <Box>
               <FormControl id="image">
-                <FormLabel>Telefone</FormLabel>
+                <FormLabel color={'gray.600'} fontFamily={'body'}>Telefone</FormLabel>
                 <Input type="text" value={phone} onChange={handlePhone} />
               </FormControl>
             </Box>
           </HStack>
           <FormControl id="sName" isRequired>
-            <FormLabel>Cidade</FormLabel>
+            <FormLabel color={'gray.600'} fontFamily={'body'}>Cidade/Estado/País</FormLabel>
             <Input type="text" value={city} onChange={handleCity}/>
           </FormControl>
           <Stack spacing={10} pt={2}>

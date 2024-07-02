@@ -65,10 +65,10 @@ import {
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'}   >
+            <Text color={'gray.500'} fontFamily={'body'} fontSize={'sm'}   >
               {props.atividades.text}
             </Text>
-            <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500}>
+            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={700} color={'gray.600'}>
                {props.atividades.name}
             </Heading>
           
@@ -80,7 +80,7 @@ import {
                 display={'none'}
                 _groupHover={{ display: 'block' }}
               >
-                <Text fontSize={'sm'}>{props.atividades.detailedInfo}</Text>
+                <Text  color={'gray.500'} fontFamily={'body'} fontSize={'sm'}>{props.atividades.detailedInfo}</Text>
             
                 </Box>
     

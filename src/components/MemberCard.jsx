@@ -61,7 +61,7 @@ export default function MemberCard(props) {
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
             {props.member.role}
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={700} color={'gray.600'}>
              {props.member.fullName}
           </Heading>
           <Stack direction={'row'} align={'center'}>

@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 
 
 
+
 const Atividades = () => {
     
 
@@ -31,6 +32,7 @@ const Atividades = () => {
      }, []);
 
      return (
+       
         <div>
             
 
@@ -51,6 +53,7 @@ const Atividades = () => {
          
 
         </div>
+        
     );
 
    

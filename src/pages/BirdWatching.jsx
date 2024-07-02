@@ -23,6 +23,7 @@ import bwtwo from '../assets/bw2.jpg';
 import bwthree from '../assets/bw3.jpg';
 import bwfour from '../assets/bw4.jpg';
 
+
 const cards = [
   {
     title: 'Rota do Paraíso',
@@ -57,15 +58,16 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function SplitWithImage() {
   return (
+   
     <Container maxW={'5xl'} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
         
-          <Heading fontSize={'2xl'} fontFamily={'Open sans'} fontWeight={500} >Birdwatching em Noronha</Heading>
+          <Heading fontSize={'3xl'} fontFamily={'body'} fontWeight={800} color={'gray.600'} >Birdwatching em Noronha</Heading>
           <Text color={'gray.600'} fontSize={'l'}>
           Você está procurando uma experiência incrível de observação de aves em Fernando de Noronha? Então você veio ao lugar certo. Na ilha, tudo se torna mais mágico. Além de ter a maior diversidade de aves marinhas do Brasil, aqui você pode tirar fotos incríveis do sebito-de-noronha (Vireo gracilirostris) e da cocoruta (Elaenia ridleyana), aves que só existem no arquipélago.
           </Text>
-          <Text color={'gray.500'} fontSize={'l'}>
+          <Text color={'gray.600'} fontSize={'l'}>
           Nos mirantes, o rabo-de-junco-de-bico-vermelho (Phaethon aethereus) e o rabo-de-junco-de-bico-amarelo (Phaethon lepturus) fazem um espetáculo de exibição, a noivinha (Gygis alba) por toda a ilha, a viuvinha-preta (Anous minutus) em seus ninhos e o mumbebo-de-pé-vermelho (Sula sula) numa visão única e privilegiada serão lifers inesquecíveis.
           </Text>
           
@@ -84,8 +86,7 @@ export default function SplitWithImage() {
        
       </Link>
           
-      {/* <img src={rabojunco} alt="sebito" width='35%' style={{ marginTop: '-450px', marginLeft: '-230px', transform: 'scaleX(-1)' }}  /> */}
-
+      
      
         </Stack>
         <Flex>
@@ -93,5 +94,6 @@ export default function SplitWithImage() {
         </Flex>
       </SimpleGrid>
     </Container>
+   
   );
 }
