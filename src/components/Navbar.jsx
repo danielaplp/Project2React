@@ -274,7 +274,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'A ilha',
+    label: 'O Arquipélago',
     children: [
       {
         label: 'Sobre',
